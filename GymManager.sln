@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36310.24 d17.14
+VisualStudioVersion = 17.14.36310.24
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
@@ -20,6 +20,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymManager.Persistence", "GymManager.Persistence\GymManager.Persistence.csproj", "{326D7C25-A798-4B23-8C2E-6A0611E08B1C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{6B232893-56C4-47F3-AC6A-97BC181DC7AE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{C358C533-FDDD-4201-8A0A-519A6973EFCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymManager.Toolkit", "GymManager.Toolkit\GymManager.Toolkit.csproj", "{3AAF4B38-D2B4-427B-9090-523E554CA334}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +47,10 @@ Global
 		{326D7C25-A798-4B23-8C2E-6A0611E08B1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{326D7C25-A798-4B23-8C2E-6A0611E08B1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{326D7C25-A798-4B23-8C2E-6A0611E08B1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AAF4B38-D2B4-427B-9090-523E554CA334}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AAF4B38-D2B4-427B-9090-523E554CA334}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AAF4B38-D2B4-427B-9090-523E554CA334}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AAF4B38-D2B4-427B-9090-523E554CA334}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,6 +63,8 @@ Global
 		{0B1DEC97-21AA-4F01-8FB0-001BF281D805} = {68C72ED4-A936-46F7-BA28-3D14DD270A04}
 		{0C79290F-6495-4580-8661-26B01D4FCDE5} = {449DDE1E-D0C0-45D9-A20E-5D2B7481D8C7}
 		{326D7C25-A798-4B23-8C2E-6A0611E08B1C} = {449DDE1E-D0C0-45D9-A20E-5D2B7481D8C7}
+		{C358C533-FDDD-4201-8A0A-519A6973EFCC} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{3AAF4B38-D2B4-427B-9090-523E554CA334} = {C358C533-FDDD-4201-8A0A-519A6973EFCC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2FFBEE63-524F-4973-9949-2143DCB3FD53}
