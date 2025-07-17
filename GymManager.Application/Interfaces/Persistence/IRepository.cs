@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq.Expressions;
 
 namespace GymManager.Application.Interfaces.Persistence
 {
     public interface IRepository<TEntity, TKey> where TEntity : class
     {
-        Task<TEntity> GetByIdAsync(TKey id);
+        Task<TEntity?> GetByIdAsync(TKey id);
         Task<IEnumerable<TEntity>> GetAllAsync();
         Task<IEnumerable<TEntity>> FindAsync(Expression<Func<TEntity, bool>> predicate);
         Task AddAsync(TEntity entity);

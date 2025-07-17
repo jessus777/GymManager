@@ -1,15 +1,21 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using GymManager.Domain.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace GymManager.Persistence.Database
 {
     public class ApplicationDbContext
-        : DbContext
+        : IdentityDbContext<User, Role, Guid>
     {
-        public ApplicationDbContext(DbContextOptions options) : base(options) { }
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+            : base(options) { }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+
+            // Configuraciones adicionales si las necesitas
+            // Ejemplo: builder.Entity<User>().Property(u => u.NombreCompleto).IsRequired();
+        }
     }
 }
