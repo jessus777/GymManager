@@ -1,5 +1,7 @@
 ﻿using GymManager.Application.Interfaces.Persistence;
+using GymManager.Domain.Entities;
 using GymManager.Persistence.Database;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore.Storage;
 
 namespace GymManager.Persistence.Repositories
@@ -7,6 +9,7 @@ namespace GymManager.Persistence.Repositories
     public class UnitOfWork
         : IUnitOfWork
     {
+        private readonly UserManager<User> _userManager;
         private readonly ApplicationDbContext _context;
         private IDbContextTransaction _transaction;
 
@@ -14,6 +17,11 @@ namespace GymManager.Persistence.Repositories
         {
             _context = context;
         }
+
+        private IUserRepositoryAsync _userRepositoryAsync;
+
+        public IUserRepositoryAsync UserRepositoryAsync =>
+            _userRepositoryAsync ??= new UserRepositoryAsync(_context, _userManager);
 
         public async Task BeginTransactionAsync()
         {

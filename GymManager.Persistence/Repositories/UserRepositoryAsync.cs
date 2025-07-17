@@ -1,5 +1,6 @@
 ﻿using GymManager.Application.Interfaces.Persistence;
 using GymManager.Domain.Entities;
+using GymManager.Persistence.Database;
 using Microsoft.AspNetCore.Identity;
 using System.Linq.Expressions;
 
@@ -9,9 +10,10 @@ namespace GymManager.Persistence.Repositories
         : IUserRepositoryAsync
     {
         private readonly UserManager<User> _userManager;
-
-        public UserRepositoryAsync(UserManager<User> userManager)
+        private readonly ApplicationDbContext _context;
+        public UserRepositoryAsync(ApplicationDbContext context, UserManager<User> userManager)
         {
+            _context = context;
             _userManager = userManager;
         }
 

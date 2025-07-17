@@ -9,6 +9,7 @@ namespace GymManager.Application.Interfaces.Persistence
     public interface IUnitOfWork
         : IDisposable
     {
+        IUserRepositoryAsync UserRepositoryAsync { get; }
         Task<int> SaveChangesAsync();
         // Métodos para transacciones explícitas
         Task BeginTransactionAsync();
