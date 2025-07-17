@@ -1,6 +1,6 @@
 ﻿namespace GymManager.Domain.Interfaces
 {
-    public abstract class AuditableEntity
+    public abstract class AuditableEntity<T> : IEntity<T>
     {
         protected AuditableEntity() : this(
         DateTime.Now,
@@ -58,5 +58,7 @@
         /// Fecha y hora en que esta entidad dejó de ser operativa en el sistema
         /// </summary>
         public DateTime VigenteHasta { get; protected set; }
+
+        public T Id { get; protected set; }
     }
 }
