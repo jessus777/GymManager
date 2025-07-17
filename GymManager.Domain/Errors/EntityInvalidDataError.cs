@@ -1,4 +1,6 @@
-﻿namespace GymManager.Domain.Errors
+﻿using GymManager.Domain.Resources;
+
+namespace GymManager.Domain.Errors
 {
     public sealed class EntityInvalidDataError 
         : DomainError
@@ -6,8 +8,8 @@
         public EntityInvalidDataError(object identifier, List<string> errors)
         {
             Identifier = identifier;
-            Message = "ElementoConflicto";
-            Detail = "Error en validación de datos";
+            Message = Strings.ElementoConflicto;
+            Detail = Strings.ErrorValidacionDatos;
             CausedBy(errors);
         }
 

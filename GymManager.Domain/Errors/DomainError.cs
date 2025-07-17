@@ -1,4 +1,5 @@
 using FluentResults;
+using GymManager.Domain.Resources;
 using GymManager.Toolkit.Text;
 
 namespace GymManager.Domain.Errors;
@@ -19,7 +20,7 @@ public abstract class DomainError
     private static string ResolveCode(Type errorType)
     {
         if (!errorType.IsDomainError())
-            throw new ArgumentException(string.Format("Tipo de error no válido", errorType.Name), nameof(errorType));
+            throw new ArgumentException(string.Format(Strings.TipoErrorNoValido, errorType.Name), nameof(errorType));
 
         if (ErrorCodes.TryGetValue(errorType, out var errorCode))
             return errorCode;

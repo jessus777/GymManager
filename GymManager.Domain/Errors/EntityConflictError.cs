@@ -1,3 +1,5 @@
+using GymManager.Domain.Resources;
+
 namespace GymManager.Domain.Errors;
 
 public sealed class EntityConflictError 
@@ -6,7 +8,7 @@ public sealed class EntityConflictError
     public EntityConflictError(object identifier, string detail)
     {
         Identifier = identifier;
-        Message = "ElementoConflicto";
+        Message = Strings.ElementoConflicto;
         Detail = detail;
     }
 
