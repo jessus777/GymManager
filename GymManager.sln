@@ -25,6 +25,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{C358C5
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymManager.Toolkit", "GymManager.Toolkit\GymManager.Toolkit.csproj", "{3AAF4B38-D2B4-427B-9090-523E554CA334}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymManager.Api", "GymManager.Api\GymManager.Api.csproj", "{12E52DA9-D2E4-4873-88D3-F32B96FA485F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{3AAF4B38-D2B4-427B-9090-523E554CA334}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3AAF4B38-D2B4-427B-9090-523E554CA334}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3AAF4B38-D2B4-427B-9090-523E554CA334}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12E52DA9-D2E4-4873-88D3-F32B96FA485F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12E52DA9-D2E4-4873-88D3-F32B96FA485F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12E52DA9-D2E4-4873-88D3-F32B96FA485F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12E52DA9-D2E4-4873-88D3-F32B96FA485F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -65,6 +71,7 @@ Global
 		{326D7C25-A798-4B23-8C2E-6A0611E08B1C} = {449DDE1E-D0C0-45D9-A20E-5D2B7481D8C7}
 		{C358C533-FDDD-4201-8A0A-519A6973EFCC} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{3AAF4B38-D2B4-427B-9090-523E554CA334} = {C358C533-FDDD-4201-8A0A-519A6973EFCC}
+		{12E52DA9-D2E4-4873-88D3-F32B96FA485F} = {0AA9B9E7-6145-4387-8965-714393887419}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2FFBEE63-524F-4973-9949-2143DCB3FD53}
